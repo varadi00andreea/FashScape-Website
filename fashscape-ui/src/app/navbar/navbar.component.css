@@ -1,0 +1,37 @@
+.topnav {
+background-color: rgb(243, 102, 177);
+overflow: hidden;
+}
+.topnav a {
+float: left;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+  }
+.topnav a:hover {
+background-color: rgb(190, 74, 153);
+  }
+.topnav a.active {
+background-color: #891159;
+color: white;
+  }
+.topnav .icon {
+display: none;
+  }
+.cart{
+   margin-left: 92%;
+}
+.banner{
+    display: flex;
+    background-color: rgb(252,252,252);
+    height: 293px;
+}
+.motto{
+    font-family: 'Anek Tamil', sans-serif;
+    align-self: center;
+    margin: auto;
+    font-size: 90px;
+}
