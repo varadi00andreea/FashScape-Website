@@ -1,0 +1,41 @@
+<div class="container">
+
+<h1 class="title">Welcome!</h1>
+
+<div class="columns">
+        <div class="column"><img class="hanger-left" src="assets/hanger.png"></div>
+        <div class="column welcome-container">    <p>Thank you for visiting us! Here at fashScape you can choose
+            from a wide range of clothes, getting in touch with those who sell them.</p>
+         <p>   If you have items that you think other users will enjoy, we invite you to
+            fill in the necessary data, and we will make
+            sure we find the right buyers. It's your choice. Login, or if you are new here, create an account and let's go!</p>
+             <p>What are you waiting for?
+            Enter the world of FashScape and have fun!  </p>          
+            </div>
+        <div class="column"><img class="hanger-right" src="assets/hanger.png"></div>
+    
+</div>
+
+<h2 class="login-text">Login</h2>
+<div class="login-form">
+<form class="login" [formGroup]="loginForm">
+    <label for="username">Username</label>
+    <input type="text" id="username" class="form-control" formControlName="username" required>
+    <div *ngIf="username.errors?.['required'] && (loginForm.touched || loginForm.dirty)">
+        Username is required.
+      </div>
+
+      <label for="password">Password</label>
+    <input type="password" id="password" class="form-control" formControlName="password" required>
+    <div *ngIf="password.errors?.['required'] && (loginForm.touched || loginForm.dirty)">
+        Password is required.
+      </div>
+
+</form>
+<div class="buttons">
+    <button class="submit">Submit</button>
+    <button class="register">I am new here</button>
+</div>
+</div>
+
+</div>

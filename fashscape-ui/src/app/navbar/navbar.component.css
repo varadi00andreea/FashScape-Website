@@ -1,6 +1,9 @@
 .topnav {
 background-color: rgb(243, 102, 177);
 overflow: hidden;
+width: 95%;
+margin-left: 25px;
+
 }
 .topnav a {
 float: left;
@@ -22,16 +25,18 @@ color: white;
 display: none;
   }
 .cart{
-   margin-left: 92%;
+   margin-left: 90%;
 }
 .banner{
     display: flex;
     background-color: rgb(252,252,252);
     height: 293px;
+    width: 95%;
+    margin-left: 25px;
 }
 .motto{
     font-family: 'Anek Tamil', sans-serif;
-    align-self: center;
+    text-align: center;
     margin: auto;
     font-size: 90px;
 }
