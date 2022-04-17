@@ -1,3 +1,4 @@
+import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -10,35 +11,39 @@ export class HomePageComponent implements OnInit {
 
   loginForm: any;
   registerForm: any;
+  registered = true;
   constructor() { }
 
   ngOnInit(): void {
-    this.loginForm=new FormGroup(
+    this.loginForm = new FormGroup(
       {
-        "username":new FormControl('', Validators.required),
-        "passwsord": new FormControl('', Validators.required)
+        "username": new FormControl('', Validators.required),
+        "password": new FormControl('', Validators.required)
       }
     );
-    this.registerForm=new FormGroup(
+    this.registerForm = new FormGroup(
       {
-        "username":new FormControl('', Validators.required),
+        "username": new FormControl('', Validators.required),
         "password": new FormControl('', Validators.required),
-        "firstName": new FormControl('', Validators.required),
-        "lastName": new FormControl('',Validators.required),
-        "address": new FormControl('',Validators.required),
-        "phoneNumber": new FormControl('',Validators.required),
-        "email":new FormControl('',Validators.required)
-        
+        "firstName": new FormControl('', [Validators.required,Validators.pattern('[a-zA-Z]*')]),
+        "lastName": new FormControl('', [Validators.required,Validators.pattern('[a-zA-Z]*')]),
+        "address": new FormControl('', Validators.required),
+        "phoneNumber": new FormControl('', [Validators.required,Validators.pattern('[0-9]*')]),
+        "email": new FormControl('', [Validators.required,Validators.email])
       }
     );
   }
 
-  get username(){
+  get username() {
     return this.loginForm.get('username');
   }
 
-  get password(){
+  get password() {
     return this.loginForm.get('password');
+  }
+
+  newUser() {
+    this.registered = !this.registered;
   }
 
 }
