@@ -1,6 +1,7 @@
 import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-home-page',
@@ -12,7 +13,7 @@ export class HomePageComponent implements OnInit {
   loginForm: any;
   registerForm: any;
   registered = true;
-  constructor() { }
+  constructor(private user:UserService) { }
 
   ngOnInit(): void {
     this.loginForm = new FormGroup(
@@ -44,6 +45,12 @@ export class HomePageComponent implements OnInit {
 
   newUser() {
     this.registered = !this.registered;
+  }
+  
+  register(){
+    this.user.saveUserData(this.registerForm.value).subscribe((result)=>{
+      console.log(result)
+    });
   }
 
 }

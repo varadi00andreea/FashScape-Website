@@ -6023,11 +6023,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\varad\\source\\repos\\FashScape\\fashscape-backend\\fashscape\\fashscape.csproj",
+      "projectUniqueName": "C:\\Users\\varad\\Desktop\\Proiect-II\\fashscape-backend\\fashscape\\fashscape.csproj",
       "projectName": "fashscape",
-      "projectPath": "C:\\Users\\varad\\source\\repos\\FashScape\\fashscape-backend\\fashscape\\fashscape.csproj",
+      "projectPath": "C:\\Users\\varad\\Desktop\\Proiect-II\\fashscape-backend\\fashscape\\fashscape.csproj",
       "packagesPath": "C:\\Users\\varad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\varad\\source\\repos\\FashScape\\fashscape-backend\\fashscape\\obj\\",
+      "outputPath": "C:\\Users\\varad\\Desktop\\Proiect-II\\fashscape-backend\\fashscape\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\varad\\AppData\\Roaming\\NuGet\\NuGet.Config",
