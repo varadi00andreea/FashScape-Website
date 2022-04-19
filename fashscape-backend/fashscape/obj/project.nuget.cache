@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qhU8Wir6oR/RiX8ys9SrrGM09+k6qoJ8GkSEbc+G8Psmvc+7vKf3zPLG2k+cGG/bvWZQlyi3s3b3+iE8uTq3TA==",
+  "dgSpecHash": "VVrGiJwGirM8jUueKExHY1m0A82iTCcXsDTU6yAkivvFQrIGFb43VFUANopvCus0lUFVKOgzP1zAfO2ehK2gxw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\varad\\source\\repos\\FashScape\\fashscape-backend\\fashscape\\fashscape.csproj",
+  "projectFilePath": "C:\\Users\\varad\\Desktop\\Proiect-II\\fashscape-backend\\fashscape\\fashscape.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\varad\\.nuget\\packages\\entityframework\\5.0.0\\entityframework.5.0.0.nupkg.sha512",
     "C:\\Users\\varad\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

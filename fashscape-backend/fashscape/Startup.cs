@@ -1,4 +1,7 @@
 using fashscape.Context;
+using fashscape.Models;
+using fashscape.Repository;
+using fashscape.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,7 +31,15 @@ namespace fashscape
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<FashscapeContext>(ServiceLifetime.Transient);
+            services.AddScoped<IGenericRepository<User>, GenericRepository<User>>();
             services.AddControllers();
+            services.AddCors(options => {
+                options.AddDefaultPolicy(builder =>
+                { builder.WithOrigins("https://localhost:4200")
+                    .AllowAnyHeader(); }); }); ;
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "fashscape", Version = "v1" });
@@ -44,6 +55,8 @@ namespace fashscape
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "fashscape v1"));
             }
+
+            app.UseCors(b => b.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
             app.UseHttpsRedirection();
 
