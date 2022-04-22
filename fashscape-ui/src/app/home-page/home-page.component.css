@@ -55,20 +55,18 @@ margin-bottom: 25px;
 padding-bottom: 10px;
 } 
 .login-input{
-    display: flex;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 400px;
-    border-radius: 5px;
-    height: 30px;
-    font-size: 20px;
+display: flex;
+margin-top: 5px;
+margin-bottom: 5px;
+width: 400px;
+border-radius: 5px;
+height: 30px;
+font-size: 20px;
 }
 .buttons{
-margin-left: 20px;
 display: flex;
 flex-direction: row;
 width: 500px;
-margin-top: 30px;
 padding-bottom: 100px;
 }
 .submit{
@@ -88,7 +86,7 @@ border-color: rgb(243, 102, 177);
 color: white;
 font-size: 20px;
 font-weight: 500;
-margin-left: 43px;
+margin-left: 195px;
 }
 .register-form{
 display: flex;
@@ -118,9 +116,9 @@ border-color: rgb(243, 102, 177);
 color: white;
 font-size: 20px;
 font-weight: 500;
-margin-left: 300px;
+margin-left: 240px;
 margin-bottom: 30px;
-margin-top: 10px;
+margin-top: auto;
 }
 .manequins{
 width: 300px;
@@ -138,7 +136,7 @@ height: fit-content;
 margin-left: 25px;
 background-color:rgb(243, 102, 177);
 color: white;
-margin-top: 250px;
+margin-top: 25%;
  }
 .one{
 margin-left: 1%;
@@ -149,7 +147,18 @@ margin-left: 85%;
  .alert{
 color: red;
 font-size: 15px;
- }
+}
+.signin-btn{
+width: fit-content;
+background-color:rgb(243, 102, 177) ;
+border-radius: 6px;
+border-color: rgb(243, 102, 177);
+color: white;
+font-size: 20px;
+font-weight: 500;
+margin-bottom: 30px;
+margin-top: 10px;
+}
 
 
 

@@ -1,4 +1,6 @@
-﻿using fashscape.Models;
+﻿using fashscape.DTOs;
+using fashscape.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;

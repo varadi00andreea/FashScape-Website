@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ChoiceComponent } from './choice/choice.component';
+import { BuyComponent } from './buy/buy.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomePageComponent,
+    ChoiceComponent,
+    BuyComponent,
  
   ],
   imports: [
