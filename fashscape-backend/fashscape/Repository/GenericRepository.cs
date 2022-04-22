@@ -22,5 +22,10 @@ namespace fashscape.Repository
             await _context.AddAsync(entity);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<List<T>> GetAll()
+        {
+            return await _dbSet.AsNoTracking().ToListAsync();
+        }
     }
 }

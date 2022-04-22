@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="container">
 
     <h1 class="title">Welcome!</h1>
@@ -44,8 +45,8 @@
         </form>
 
         <div class="buttons">
-            <button class="submit">Log in</button>
-            <button class="register-btn" (click)="newUser()">I am new here</button>
+            <button class="submit" (click)="logIn()">Log in</button>
+          <div *ngIf="!accountCreated"><button class="register-btn" (click)="newUser()">I am new here</button></div>
         </div>
 
     </div>
@@ -123,8 +124,8 @@
                     *Enter a valid email address.
                 </div>
             </div>
-
-            <button (click)="register()" class="register-btn2">Register</button>
+            <button  (click)="signIn()" class="signin-btn">Sign in</button>
+          <button (click)="register()" class="register-btn2" *ngIf="!accountCreated">Register</button>
         </form>
     </div>
 

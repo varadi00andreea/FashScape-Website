@@ -1,6 +1,9 @@
-﻿using fashscape.Models;
+﻿using fashscape.DTOs;
+using fashscape.Models;
 using fashscape.Services;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace fashscape.Controllers
@@ -22,5 +25,17 @@ namespace fashscape.Controllers
             return Ok(user.Id);
         }
         
+        [HttpGet]
+        public async Task<ActionResult<List<User>>> GetUsers()
+        {
+            try
+            {
+                return Ok(await _userService.GetAll());
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
     }
 }
