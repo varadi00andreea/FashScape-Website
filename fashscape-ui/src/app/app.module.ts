@@ -8,6 +8,12 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ChoiceComponent } from './choice/choice.component';
 import { BuyComponent } from './buy/buy.component';
+import { SellComponent } from './sell/sell.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+import { HelpComponent } from './help/help.component';
+import { SingleProductComponent } from './single-product/single-product.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,13 +21,18 @@ import { BuyComponent } from './buy/buy.component';
     HomePageComponent,
     ChoiceComponent,
     BuyComponent,
+    SellComponent,
+    HelpComponent,
+    SingleProductComponent,
  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatInputModule,
     
   ],
   providers: [],

@@ -18,7 +18,7 @@ export class ChoiceComponent implements OnInit {
   }
 
   goToSell(){
-    this.router.navigate(['']);
+    this.router.navigate(['/sell']);
   }
 
 }

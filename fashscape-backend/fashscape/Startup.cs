@@ -33,6 +33,8 @@ namespace fashscape
         {
             services.AddDbContext<FashscapeContext>(ServiceLifetime.Transient);
             services.AddScoped<IGenericRepository<User>, GenericRepository<User>>();
+            services.AddScoped<IGenericRepository<Product>, GenericRepository<Product>>();
+            services.AddScoped<IGenericRepository<ShoppingCart>, GenericRepository<ShoppingCart>>();
             services.AddControllers();
             services.AddCors(options => {
                 options.AddDefaultPolicy(builder =>
@@ -40,6 +42,11 @@ namespace fashscape
                     .AllowAnyHeader(); }); }); ;
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<ICartRepository, CartRepository>();
+            services.AddScoped<ICartService, CartService>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "fashscape", Version = "v1" });
