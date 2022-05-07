@@ -7,6 +7,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { SellComponent } from './sell/sell.component';
 import { SingleProductComponent } from './single-product/single-product.component';
 
+
 const routes: Routes = [
   {path:'',component:HomePageComponent},
   {path:'make-your-choice', component:ChoiceComponent},
