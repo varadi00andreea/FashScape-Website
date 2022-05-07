@@ -3,21 +3,45 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using fashscape.Context;
 
 namespace fashscape.Migrations
 {
     [DbContext(typeof(FashscapeContext))]
-    partial class FashscapeContextModelSnapshot : ModelSnapshot
+    [Migration("20220503181129_ProductAdd")]
+    partial class ProductAdd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
+
+            modelBuilder.Entity("fashscape.Models.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ShoppingCartId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("ShoppingCartId");
+
+                    b.ToTable("Orders");
+                });
 
             modelBuilder.Entity("fashscape.Models.Product", b =>
                 {
@@ -117,7 +141,7 @@ namespace fashscape.Migrations
                         });
                 });
 
-            modelBuilder.Entity("fashscape.Models.ShoppingCart", b =>
+            modelBuilder.Entity("fashscape.Models.Sell", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -127,9 +151,31 @@ namespace fashscape.Migrations
                     b.Property<int?>("ProductId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Sells");
+                });
+
+            modelBuilder.Entity("fashscape.Models.ShoppingCart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("ShoppingCarts");
                 });
@@ -180,13 +226,43 @@ namespace fashscape.Migrations
                         });
                 });
 
-            modelBuilder.Entity("fashscape.Models.ShoppingCart", b =>
+            modelBuilder.Entity("fashscape.Models.Order", b =>
                 {
                     b.HasOne("fashscape.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId");
 
+                    b.HasOne("fashscape.Models.ShoppingCart", "ShoppingCart")
+                        .WithMany()
+                        .HasForeignKey("ShoppingCartId");
+
                     b.Navigation("Product");
+
+                    b.Navigation("ShoppingCart");
+                });
+
+            modelBuilder.Entity("fashscape.Models.Sell", b =>
+                {
+                    b.HasOne("fashscape.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId");
+
+                    b.HasOne("fashscape.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Product");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("fashscape.Models.ShoppingCart", b =>
+                {
+                    b.HasOne("fashscape.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

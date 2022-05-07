@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+<div class="info">
+    Make your life easier and get rid of clothes you no longer want, by making others happy! Just complete these fields and we will take it from here!
+</div>
+<div class="content">
+<form class="sell" [formGroup]="sellForm">
+
+    <div class="row">
+         <div class="column">
+            <label for="name" class="label">Name of your product:</label>
+         </div>
+         <div class="column">
+            <input type="text" class="input-field" formControlName="name" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+         <label for="description" class="label">Description of your product:</label>
+        </div>
+        <div class="column">
+            <input type="text" class="input-field" formControlName="description" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <label for="price" class="label">Price of your product (RON):</label>
+        </div>
+        <div class="column">
+            <input type="text" class="input-field" formControlName="price" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <label for="size" class="label">Size of your product:</label>
+        </div>
+        <div class="column">
+            <input type="text" class="input-field" formControlName="size" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <label class="label">Your request of selling number:</label>
+        </div>
+        <div class="column">
+            <label class="label">{{sellNumber}}</label>
+        </div>
+    </div>
+</form>
+</div>
+<div class="btn"><button class="submit-btn" (click)="submit()">Submit</button></div>
+<div class="info">
+    Now, all you have to do is to send us a picture of this awesome product that you are trying to sell and we will take it from here:
+    <a href="https://drive.google.com/drive/folders/1TqIyxfgrfHAj4KMRYGHfR8jg40ZC_NxK?usp=sharing">Click here</a>
+</div>
+
+
+<div class="footer">
+    <p class="one">FashScape</p>
+    <p class="two">Since 2022</p>
+</div>

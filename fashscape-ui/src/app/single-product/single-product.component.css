@@ -1,0 +1,71 @@
+.container{
+box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.1) ;
+border-radius: 10px;  
+width: 95%;
+margin-left: 25px;
+margin-top: 20px;
+}
+.footer {
+display: flex;
+flex-direction: row;
+position: absolute;
+width: 95%;
+height: fit-content;
+margin-left: 25px;
+background-color:rgb(243, 102, 177);
+color: white;
+ }
+.one{
+margin-left: 1%;
+}
+.two{
+margin-left: 85%;
+}
+.name{
+width: 100%;
+font-size: 30px;
+font-weight: 400;
+text-align: center;
+font-family: 'Anek Tamil', sans-serif;
+}
+.name:hover{
+color: rgb(243, 102, 177);
+}
+.column {
+float: left;
+width: fit-content;
+margin-top: 50px;
+margin-left: 100px;
+margin-bottom: 50px;
+}
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+.description{
+font-size: 20px;
+font-weight: 600;
+font-family: 'Anek Tamil', sans-serif;
+width: 850px;
+text-align: justify;
+text-indent: 5px;
+}
+hr{
+background-color: rgb(243, 102, 177);
+height: 1px;   
+}
+.description:hover{
+    color: rgb(243, 102, 177);    
+}
+.buy-btn{
+width: fit-content;
+background-color:rgb(243, 102, 177) ;
+border-radius: 6px;
+border-color: rgb(243, 102, 177);
+font-size: 20px;
+font-weight: 500;
+color: white; 
+margin-left: 70%;
+margin-top:15px;
+}
