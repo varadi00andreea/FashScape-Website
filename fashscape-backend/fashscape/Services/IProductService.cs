@@ -11,5 +11,6 @@ namespace fashscape.Services
         Task AddProduct(Product product);
         Task<List<Product>> GetAll();
         Task<Product> GetProductByName(string producName);
+        Task<Product> GetById(int id);
     }
 }

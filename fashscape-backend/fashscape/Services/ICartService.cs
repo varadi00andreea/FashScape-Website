@@ -9,5 +9,7 @@ namespace fashscape.Services
     public interface ICartService
     {
         Task CreateAsync(ShoppingCart cart);
+        Task<List<ShoppingCart>> GetAll();
+        Task DeleteByIdAsync(int id);
     }
 }

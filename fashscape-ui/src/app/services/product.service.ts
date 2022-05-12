@@ -22,4 +22,8 @@ export class ProductService {
   getProductByName(name: string){
     return this.http.get<any>(`${this.url1}getByName?productName=${name}`);
   }
+
+  getProductById(id: number){
+    return this.http.get<any>(`${this.url1}getById?productId=${id}`);
+  }
 }

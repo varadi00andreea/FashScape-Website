@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import { HelpComponent } from './help/help.component';
 import { SingleProductComponent } from './single-product/single-product.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { SingleProductComponent } from './single-product/single-product.componen
     SellComponent,
     HelpComponent,
     SingleProductComponent,
+    AboutUsComponent,
+    ShoppingCartComponent,
  
   ],
   imports: [
