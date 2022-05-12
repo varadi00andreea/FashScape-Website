@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
-  <a href="#sell">Sell</a>
-  <a href="#buy">Buy</a>
+  <a  [routerLink]="['']">Home</a>
+  <a [routerLink]="['/sell']">Sell</a>
+  <a [routerLink]="['/buy']">Buy</a>
   <a href="#about">About us</a>
-  <a href="#help">Help</a>
+  <a [routerLink]="['/help']">Help</a>
   <div class="cart">   
       <a href="#shopping-cart">Shopping Cart</a>
   </div>
@@ -20,4 +20,5 @@
 <div class="motto">
     Bringing you the elements of style
 </div>
+
 </div>

@@ -19,28 +19,6 @@ namespace fashscape.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("fashscape.Models.Order", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int?>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ShoppingCartId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("ShoppingCartId");
-
-                    b.ToTable("Orders");
-                });
-
             modelBuilder.Entity("fashscape.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -57,31 +35,86 @@ namespace fashscape.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
+                    b.Property<string>("Size")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Products");
-                });
 
-            modelBuilder.Entity("fashscape.Models.Sell", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int?>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Sells");
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Popular from the early 1990s to the mid 2000s, baggy jeans are back in style. They have a cool factor to them that makes even the simplest wardrobes come to life.",
+                            Name = "Baggy Jeans",
+                            Price = 89.989999999999995,
+                            Size = "38"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Perfect for summer days. Very soft material.",
+                            Name = "Casual Dress",
+                            Price = 47.0,
+                            Size = "Universal"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "I've recently buyed it but it's not the right size. I have to say it's not very stretchy.",
+                            Name = "Pink Crop Top",
+                            Price = 62.299999999999997,
+                            Size = "S"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "Perfect for a summerish wedding.",
+                            Name = "Gown",
+                            Price = 326.99000000000001,
+                            Size = "36-38"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Description = "Form-flattering that provides ultimate comfort in high intensity workout.",
+                            Name = "Gym Leggings",
+                            Price = 89.900000000000006,
+                            Size = "S"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Description = "Great if you are looking for a fashion forward twist on classic denim jeans.",
+                            Name = "Black Flared Jeans",
+                            Price = 120.98999999999999,
+                            Size = "40"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Description = "Knee high boots are a staple in every wardrobe.",
+                            Name = "Knee High Boots",
+                            Price = 200.0,
+                            Size = "39"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Description = "Very nice color. It looks good on anyone.",
+                            Name = "Split Maxi Dress",
+                            Price = 170.0,
+                            Size = "M"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Description = "High heeled sandals. You can wear them for a casual look or even for a party.",
+                            Name = "Sandals",
+                            Price = 219.90000000000001,
+                            Size = "37"
+                        });
                 });
 
             modelBuilder.Entity("fashscape.Models.ShoppingCart", b =>
@@ -91,12 +124,12 @@ namespace fashscape.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("UserId")
+                    b.Property<int?>("ProductId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("ProductId");
 
                     b.ToTable("ShoppingCarts");
                 });
@@ -147,43 +180,13 @@ namespace fashscape.Migrations
                         });
                 });
 
-            modelBuilder.Entity("fashscape.Models.Order", b =>
-                {
-                    b.HasOne("fashscape.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId");
-
-                    b.HasOne("fashscape.Models.ShoppingCart", "ShoppingCart")
-                        .WithMany()
-                        .HasForeignKey("ShoppingCartId");
-
-                    b.Navigation("Product");
-
-                    b.Navigation("ShoppingCart");
-                });
-
-            modelBuilder.Entity("fashscape.Models.Sell", b =>
-                {
-                    b.HasOne("fashscape.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId");
-
-                    b.HasOne("fashscape.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
-
-                    b.Navigation("Product");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("fashscape.Models.ShoppingCart", b =>
                 {
-                    b.HasOne("fashscape.Models.User", "User")
+                    b.HasOne("fashscape.Models.Product", "Product")
                         .WithMany()
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("ProductId");
 
-                    b.Navigation("User");
+                    b.Navigation("Product");
                 });
 #pragma warning restore 612, 618
         }
