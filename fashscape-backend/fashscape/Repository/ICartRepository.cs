@@ -8,5 +8,6 @@ namespace fashscape.Repository
 {
     public interface ICartRepository : IGenericRepository<ShoppingCart>
     {
+
     }
 }

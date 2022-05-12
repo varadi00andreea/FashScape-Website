@@ -9,5 +9,9 @@ namespace fashscape.Repository
     {
         Task Create(T entity);
         Task<List<T>> GetAll();
+        Task<T> GetById(int id);
+        Task Delete(object id);
+
+        Task Update(T entity);
     }
 }

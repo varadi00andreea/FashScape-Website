@@ -45,5 +45,11 @@ namespace fashscape.Controllers
            return await _productService.GetProductByName(productName);
             
         }
+
+        [HttpGet("/getById")]
+        public async Task<Product> GetById(int id)
+        {
+            return await _productService.GetById(id);
+        }
     }
 }

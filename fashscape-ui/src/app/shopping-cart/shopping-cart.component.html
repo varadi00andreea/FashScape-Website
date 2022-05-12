@@ -1,0 +1,75 @@
+<app-navbar></app-navbar>
+<div class="cart">Your Shopping Cart</div>
+<div class="container">
+
+    <div *ngFor="let productInCart of cartProductsList">
+        
+        <div class="row">
+            <div class="photo column">
+                <div *ngIf="productInCart.name=='Baggy Jeans'">
+                 <img src="assets/baggy-jeans.jpg"> 
+                 </div>
+
+                <div *ngIf="productInCart.name=='Casual Dress'">
+                <img src="assets/casual-dress.jpg">
+                </div>
+
+                <div *ngIf="productInCart.name=='Pink Crop Top'">
+                <img src="assets/pink-crop-top.jpg">
+                 </div>
+
+                <div *ngIf="productInCart.name=='Gown'">
+                <img src="assets/gown.jpg">
+                </div>
+
+                <div *ngIf="productInCart.name=='Gym Leggings'">
+                <img src="assets/gym-leggings.jpg">
+                 </div>
+
+                <div *ngIf="productInCart.name=='Black Flared Jeans'">
+                <img src="assets/black-flared-jeans.jpg">
+                </div>
+
+                <div *ngIf="productInCart.name=='Knee High Boots'">
+                <img src="assets/knee-high-boots.jpg">
+                </div>
+
+                <div *ngIf="productInCart.name=='Split Maxi Dress'">
+                <img src="assets/split-maxi-dress.jpg">
+                 </div>
+
+                <div *ngIf="productInCart.name=='Sandals'">
+                <img src="assets/sandals.jpg">
+                 </div>
+             </div>
+
+                <div class="column description">
+                     Name: {{productInCart.name}}
+                     <hr>
+                     <div class="description">
+                     Price: {{productInCart.price}}
+                     </div>
+                     <hr>
+                     <div class="description">
+                     The product is in size {{productInCart.size}}
+                     </div>
+                     <hr>
+
+                
+
+                <button class="delete-btn" (click)="deleteItem(productInCart.id)">Delete Item From Cart</button>
+            </div>
+        </div>
+        <button class="complete-btn" (click)="release()">Complete</button>
+    </div>
+
+    
+
+</div>
+
+
+
+<div class="footer">
+    <p class="one">FashScape</p>
+    <p class="two">Since 2022</p>
+</div>

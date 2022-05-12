@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using fashscape.Context;
 
 namespace fashscape.Migrations
 {
     [DbContext(typeof(FashscapeContext))]
-    partial class FashscapeContextModelSnapshot : ModelSnapshot
+    [Migration("20220508182954_ChangedCart")]
+    partial class ChangedCart
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

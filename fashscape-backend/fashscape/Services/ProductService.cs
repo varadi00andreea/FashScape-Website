@@ -29,5 +29,10 @@ namespace fashscape.Services
         {
             return await _productRepo.GetProductByName(productName);
         }
+
+        public async Task<Product> GetById(int id)
+        {
+            return await _productRepo.GetById(id);
+        }
     }
 }
