@@ -12,7 +12,7 @@ namespace fashscape.Repository
     {
         public ProductRepository(FashscapeContext context) : base(context)
         {
-           
+
         }
 
         public async Task<Product> GetProductByName(string productName)

@@ -12,5 +12,6 @@ namespace fashscape.Services
     {
         Task CreateAsync(User user);
         Task<List<User>> GetAll();
+        Task UpdatePassword(UserDTO user, string newPassword);
     }
 }

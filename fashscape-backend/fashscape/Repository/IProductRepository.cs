@@ -8,6 +8,6 @@ namespace fashscape.Repository
 {
     public interface IProductRepository : IGenericRepository<Product>
     {
-         Task<Product> GetProductByName(string productName);
+        Task<Product> GetProductByName(string productName);
     }
 }

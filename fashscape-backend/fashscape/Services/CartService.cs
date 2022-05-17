@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace fashscape.Services
 {
-    public class CartService: ICartService
+    public class CartService : ICartService
     {
         private readonly ICartRepository _cartRepo;
         public CartService(ICartRepository cartRepo)
@@ -28,6 +28,6 @@ namespace fashscape.Services
         {
             await _cartRepo.Delete(id);
         }
- 
+
     }
 }

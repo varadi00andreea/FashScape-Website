@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <h2 class="login-text">Update your information</h2>
+    <div class="register-form">
+        <form class="register" [formGroup]="registerForm">
+
+            <div class="row">
+                <label for="username">Enter Your Username</label>
+                <input type="text" class="form-control register-input" formControlName="username" required>
+                <div *ngIf="registerForm.controls['username'].errors?.['required'] && (registerForm.controls['username'].touched || registerForm.controls['username'].dirty)"
+                    class="alert">
+                    *Username is required.
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="password">Enter Your Current Password</label>
+                <input type="password" class="form-control register-input" formControlName="password" required>
+                <div *ngIf="registerForm.controls['password'].errors?.['required'] && (registerForm.controls['password'].touched || registerForm.controls['password'].dirty)"
+                    class="alert">
+                    *Password is required.
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="newPassword">Enter Your New Password</label>
+                <input type="password" class="form-control register-input" formControlName="newPassword" required>
+                <div *ngIf="registerForm.controls['newPassword'].errors?.['required'] && (registerForm.controls['newPassword'].touched || registerForm.controls['newPassword'].dirty)"
+                    class="alert">
+                    *Password is required.
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="newPasswordRepetead">Confirm Your New Password</label>
+                <input type="password" class="form-control register-input" formControlName="newPasswordRepetead"
+                    required>
+                <div *ngIf="registerForm.controls['newPasswordRepetead'].errors?.['required'] && (registerForm.controls['newPasswordRepetead'].touched || registerForm.controls['newPasswordRepetead'].dirty)"
+                    class="alert">
+                    *Password is required.
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+    <button class="update-btn" (click)="update()">Update</button>
+    <button class="back-btn" (click)="goBack()">Go Back</button>
+</div>
+<div class="footer">
+    <p class="one">FashScape</p>
+    <p class="two">Since 2022</p>
+</div>

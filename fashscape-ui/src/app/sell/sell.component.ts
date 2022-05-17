@@ -11,7 +11,7 @@ import { ProductService } from '../services/product.service';
 export class SellComponent implements OnInit {
   sellForm: any;
   sellNumber: any;
-  constructor(private product:ProductService) { }
+  constructor(private product: ProductService) { }
 
   ngOnInit(): void {
     this.sellForm = new FormGroup(
@@ -19,21 +19,21 @@ export class SellComponent implements OnInit {
         "name": new FormControl('', Validators.required),
         "description": new FormControl('', Validators.required),
         "price": new FormControl('', [Validators.required, Validators.pattern('[0-9]*')]),
-        "size": new FormControl('',Validators.required)
+        "size": new FormControl('', Validators.required)
 
       }
     );
-    this.sellNumber=Math.floor(Math.random() * (3500 - 1 + 1)) + 1;
+    this.sellNumber = Math.floor(Math.random() * (3500 - 1 + 1)) + 1;
   }
 
-  submit(){
-    if(this.sellForm!=null){
+  submit() {
+    if (this.sellForm != null) {
       this.product.addProduct(this.sellForm.value).subscribe((result) => {
         console.log(result)
       });
-      Swal.fire({icon: 'success',  title: 'Thank you!',  text: 'One more step!'});
+      Swal.fire({ icon: 'success', title: 'Thank you!', text: 'One more step!' });
     }
-    else{
+    else {
       Swal.fire('Please complete the form.');
     }
   }

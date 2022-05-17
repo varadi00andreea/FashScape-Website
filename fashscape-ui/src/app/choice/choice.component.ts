@@ -13,12 +13,16 @@ export class ChoiceComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToBuy(){
+  goToBuy() {
     this.router.navigate(['/buy']);
   }
 
-  goToSell(){
+  goToSell() {
     this.router.navigate(['/sell']);
+  }
+
+  update() {
+    this.router.navigate(['/update-profile']);
   }
 
 }

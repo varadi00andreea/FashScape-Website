@@ -12,17 +12,17 @@ text-align: center;
 padding: 14px 16px;
 text-decoration: none;
 font-size: 17px;
-  }
+}
 .topnav a:hover {
 background-color: rgb(190, 74, 153);
-  }
+}
 .topnav a.active {
 background-color: #891159;
 color: white;
-  }
+}
 .topnav .icon {
 display: none;
-  }
+}
 .cart{
 margin-left: 90%;
 }

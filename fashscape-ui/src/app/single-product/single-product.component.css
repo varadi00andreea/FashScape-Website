@@ -14,7 +14,7 @@ height: fit-content;
 margin-left: 25px;
 background-color:rgb(243, 102, 177);
 color: white;
- }
+}
 .one{
 margin-left: 1%;
 }
@@ -56,7 +56,7 @@ background-color: rgb(243, 102, 177);
 height: 1px;   
 }
 .description:hover{
-    color: rgb(243, 102, 177);    
+color: rgb(243, 102, 177);    
 }
 .buy-btn{
 width: fit-content;
@@ -69,7 +69,6 @@ color: white;
 margin-left: 70%;
 margin-top:15px;
 cursor: pointer;
-
 }
 .back-btn{
 width: fit-content;
@@ -82,5 +81,4 @@ color: white;
 margin-left: 30px;
 margin-top:15px;
 cursor: pointer;
-
 }

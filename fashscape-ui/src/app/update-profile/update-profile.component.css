@@ -1,0 +1,72 @@
+.register-form{
+display: flex;
+flex-direction: column;
+margin-left: 25%;
+font-size: 23px;
+width: fit-content;
+}
+.row{
+flex: content;
+font-size: 23px;
+}
+.register-input{
+display: flex;
+margin-top: 5px;
+margin-bottom: 5px;
+width: 400px;
+border-radius: 5px;
+height: 30px;
+font-size: 20px;
+}
+.footer {
+display: flex;
+flex-direction: row;
+position: absolute;
+width: 95%;
+height: fit-content;
+margin-left: 25px;
+background-color:rgb(243, 102, 177);
+color: white;
+}
+.one{
+margin-left: 1%;
+}
+.two{
+margin-left: 85%;
+}
+.alert{
+color: red;
+font-size: 15px;
+}
+.login-text{
+margin-left: 25%;
+margin-top: 50px;
+font-size: 30px;
+}
+.login-text:hover{
+color: rgb(243, 102, 177);
+}
+.update-btn{
+width: fit-content;
+background-color:rgb(243, 102, 177) ;
+border-radius: 6px;
+border-color: rgb(243, 102, 177);
+color: white;
+font-size: 20px;
+font-weight: 500;
+margin-left: 60%;
+margin-bottom: 5%;
+cursor: pointer;
+}
+.back-btn{
+width: fit-content;
+background-color:rgb(243, 102, 177) ;
+border-radius: 6px;
+border-color: rgb(243, 102, 177);
+color: white;
+font-size: 20px;
+font-weight: 500;
+margin-left: 5%;
+margin-bottom: 5%;
+cursor: pointer;    
+}

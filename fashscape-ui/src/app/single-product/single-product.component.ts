@@ -13,8 +13,9 @@ import { ProductService } from '../services/product.service';
 })
 export class SingleProductComponent implements OnInit {
   product!: Product;
+  
   constructor(private route: ActivatedRoute,
-    private productService: ProductService, private cartService: CartService,private router: Router) {
+    private productService: ProductService, private cartService: CartService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -32,10 +33,10 @@ export class SingleProductComponent implements OnInit {
   add() {
     console.log(this.product);
     this.cartService.addToCart(this.product).subscribe(rez => console.log(rez));
-    Swal.fire({  icon: 'success',  title: 'Yay!',  text: 'Product Added To Your Cart.'});
+    Swal.fire({ icon: 'success', title: 'Yay!', text: 'Product Added To Your Cart.' });
   }
 
-  goBack(){
+  goBack() {
     this.router.navigate(['/buy']);
   }
 

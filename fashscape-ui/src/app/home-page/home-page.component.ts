@@ -38,18 +38,18 @@ export class HomePageComponent implements OnInit {
   }
 
   logIn() {
-   this.http.get<any>("https://localhost:44322/User")
-   .subscribe(res=>{
-     const user=res.find((a:any)=>{
-       return a.username===this.loginForm.value.username && a.password===this.loginForm.value.password
-     });
-     if(user){
-       Swal.fire({  icon: 'success',  title: 'Yay!',  text: 'Login Success'});
-       this.router.navigate(['/make-your-choice']);
-     }else{
-       Swal.fire({  icon: 'question',  title: 'Oops...',  text: 'User not found!'});
-     }
-   })
+    this.http.get<any>("https://localhost:44322/User")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.username === this.loginForm.value.username && a.password === this.loginForm.value.password
+        });
+        if (user) {
+          Swal.fire({ icon: 'success', title: 'Yay!', text: 'Login Success' });
+          this.router.navigate(['/make-your-choice']);
+        } else {
+          Swal.fire({ icon: 'question', title: 'Oops...', text: 'User not found!' });
+        }
+      })
   }
 
   newUser() {
@@ -61,7 +61,7 @@ export class HomePageComponent implements OnInit {
       this.user.saveUserData(this.registerForm.value).subscribe((result) => {
         console.log(result)
       });
-      Swal.fire( {icon: 'success',  title: 'Great!',  text: 'Your account has been created!'});
+      Swal.fire({ icon: 'success', title: 'Great!', text: 'Your account has been created!' });
       this.accountCreated = !this.accountCreated;
       this.registerForm.reset();
     }

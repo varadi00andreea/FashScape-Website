@@ -17,7 +17,15 @@ namespace fashscape.Repository
 
         }
 
-        
+        public async Task UpdatePassword(UserDTO user, string newPassword)
+        {
+            var userUpdated = await _context.Users.FirstOrDefaultAsync(x => x.Username == user.Username && x.Password == user.Password);
+            if (userUpdated != null)
+            {
+                userUpdated.Password = newPassword;
+                await _context.SaveChangesAsync();
+            }
+        }
     }
-    
+
 }

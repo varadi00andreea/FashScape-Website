@@ -7,7 +7,7 @@ height: fit-content;
 margin-left: 25px;
 background-color:rgb(243, 102, 177);
 color: white;
- }
+}
 .one{
 margin-left: 1%;
 }
@@ -29,24 +29,24 @@ font-weight: 700;
 margin-top: 50px;
 }
 .title:hover{
-    color: rgb(243, 102, 177);   
+color: rgb(243, 102, 177);   
 }
 .us{
-    text-align: center;
+text-align: center;
 font-size: 40px;
 font-weight: 500;
 margin-top: 100px;
 }
 .us:hover{
-    color: rgb(243, 102, 177);   
+color: rgb(243, 102, 177);   
 }
 .us-text{
-    font-size: 30px;
-    font-weight: 500;
-    margin-top: 50px;    
-    line-height: 1;
-    margin-left: 2%;
-    margin-right: 2%;
-    text-align: justify;
-    text-indent: 20px;
+font-size: 30px;
+font-weight: 500;
+margin-top: 50px;    
+line-height: 1;
+margin-left: 2%;
+margin-right: 2%;
+text-align: justify;
+text-indent: 20px;
 }

@@ -33,20 +33,22 @@
         <form class="login" [formGroup]="loginForm">
             <label for="username">Username</label>
             <input type="text" id="username" class="form-control login-input" formControlName="username" required>
-            <div *ngIf="loginForm.controls['username'].errors?.['required'] && (loginForm.controls['username'].touched || loginForm.controls['username'].dirty)" class="alert">
+            <div *ngIf="loginForm.controls['username'].errors?.['required'] && (loginForm.controls['username'].touched || loginForm.controls['username'].dirty)"
+                class="alert">
                 *Username is required.
             </div>
 
             <label for="password">Password</label>
             <input type="password" id="password" class="form-control login-input" formControlName="password" required>
-            <div *ngIf="loginForm.controls['password'].errors?.['required'] && (loginForm.controls['password'].touched || loginForm.controls['password'].dirty)" class="alert">
+            <div *ngIf="loginForm.controls['password'].errors?.['required'] && (loginForm.controls['password'].touched || loginForm.controls['password'].dirty)"
+                class="alert">
                 *Password is required.
             </div>
         </form>
 
         <div class="buttons">
             <button class="submit" (click)="logIn()">Log in</button>
-          <div *ngIf="!accountCreated"><button class="register-btn" (click)="newUser()">I am new here</button></div>
+            <div *ngIf="!accountCreated"><button class="register-btn" (click)="newUser()">I am new here</button></div>
         </div>
 
     </div>
@@ -60,7 +62,8 @@
             <div class="row">
                 <label for="username">Username</label>
                 <input type="text" class="form-control register-input" formControlName="username" required>
-                <div *ngIf="registerForm.controls['username'].errors?.['required'] && (registerForm.controls['username'].touched || registerForm.controls['username'].dirty)" class="alert">
+                <div *ngIf="registerForm.controls['username'].errors?.['required'] && (registerForm.controls['username'].touched || registerForm.controls['username'].dirty)"
+                    class="alert">
                     *Username is required.
                 </div>
             </div>
@@ -68,7 +71,8 @@
             <div class="row">
                 <label for="password">Password</label>
                 <input type="password" class="form-control register-input" formControlName="password" required>
-                <div *ngIf="registerForm.controls['password'].errors?.['required'] && (registerForm.controls['password'].touched || registerForm.controls['password'].dirty)" class="alert">
+                <div *ngIf="registerForm.controls['password'].errors?.['required'] && (registerForm.controls['password'].touched || registerForm.controls['password'].dirty)"
+                    class="alert">
                     *Password is required.
                 </div>
             </div>
@@ -76,21 +80,25 @@
             <div class="row">
                 <label for="firstName">First Name</label>
                 <input type="text" class="form-control register-input" formControlName="firstName" required>
-                <div *ngIf="registerForm.controls['firstName'].errors?.['required'] && (registerForm.controls['firstName'].touched || registerForm.controls['firstName'].dirty)" class="alert">
+                <div *ngIf="registerForm.controls['firstName'].errors?.['required'] && (registerForm.controls['firstName'].touched || registerForm.controls['firstName'].dirty)"
+                    class="alert">
                     *First Name is required.
                 </div>
-                <div *ngIf="registerForm.controls['firstName'].errors?.pattern && (registerForm.controls['firstName'].touched || registerForm.controls['firstName'].dirty)" class="alert">
+                <div *ngIf="registerForm.controls['firstName'].errors?.pattern && (registerForm.controls['firstName'].touched || registerForm.controls['firstName'].dirty)"
+                    class="alert">
                     *Your first name cannot contain numbers.
                 </div>
             </div>
 
             <div class="row">
                 <label for="lastName">Last Name</label>
-                <input type="text" class="form-control register-input" formControlName="firstName" required>
-                <div *ngIf="registerForm.controls['lastName'].errors?.['required'] && (registerForm.controls['lastName'].touched || registerForm.controls['lastName'].dirty)" class="alert">
+                <input type="text" class="form-control register-input" formControlName="lastName" required>
+                <div *ngIf="registerForm.controls['lastName'].errors?.['required'] && (registerForm.controls['lastName'].touched || registerForm.controls['lastName'].dirty)"
+                    class="alert">
                     *Last Name is required.
                 </div>
-                <div *ngIf="registerForm.controls['lastName'].errors?.pattern && (registerForm.controls['lastName'].touched || registerForm.controls['lastName'].dirty)" class="alert">
+                <div *ngIf="registerForm.controls['lastName'].errors?.pattern && (registerForm.controls['lastName'].touched || registerForm.controls['lastName'].dirty)"
+                    class="alert">
                     *Your last name cannot contain numbers.
                 </div>
             </div>
@@ -98,7 +106,8 @@
             <div class="row">
                 <label for="address">Address</label>
                 <input type="text" class="form-control register-input" formControlName="address" required>
-                <div *ngIf="registerForm.controls['address'].errors?.['required'] && (registerForm.controls['address'].touched || registerForm.controls['address'].dirty)" class="alert">
+                <div *ngIf="registerForm.controls['address'].errors?.['required'] && (registerForm.controls['address'].touched || registerForm.controls['address'].dirty)"
+                    class="alert">
                     *Address is required.
                 </div>
             </div>
@@ -106,10 +115,12 @@
             <div class="row">
                 <label for="phoneNumber">Phone Number</label>
                 <input type="text" class="form-control register-input" formControlName="phoneNumber" required>
-                <div *ngIf="registerForm.controls['phoneNumber'].errors?.['required'] && (registerForm.controls['phoneNumber'].touched || registerForm.controls['phoneNumber'].dirty)" class="alert">
+                <div *ngIf="registerForm.controls['phoneNumber'].errors?.['required'] && (registerForm.controls['phoneNumber'].touched || registerForm.controls['phoneNumber'].dirty)"
+                    class="alert">
                     *Phone number is required.
                 </div>
-                <div *ngIf="registerForm.controls['phoneNumber'].errors?.pattern && (registerForm.controls['phoneNumber'].touched || registerForm.controls['phoneNumber'].dirty)" class="alert">
+                <div *ngIf="registerForm.controls['phoneNumber'].errors?.pattern && (registerForm.controls['phoneNumber'].touched || registerForm.controls['phoneNumber'].dirty)"
+                    class="alert">
                     *Enter a valid phone number.
                 </div>
             </div>
@@ -117,15 +128,16 @@
             <div class="row">
                 <label for="email">Email</label>
                 <input type="text" class="form-control register-input" formControlName="email" required>
-                <div *ngIf="registerForm.controls['email'].errors?.['required'] && (registerForm.controls['email'].touched || registerForm.controls['email'].dirty)" class="alert">
+                <div *ngIf="registerForm.controls['email'].errors?.['required'] && (registerForm.controls['email'].touched || registerForm.controls['email'].dirty)"
+                    class="alert">
                     *Email is required.
                 </div>
                 <div *ngIf="registerForm.controls['email'].errors?.email" class="alert">
                     *Enter a valid email address.
                 </div>
             </div>
-            <button  (click)="signIn()" class="signin-btn">Sign in</button>
-          <button (click)="register()" class="register-btn2" *ngIf="!accountCreated">Register</button>
+            <button (click)="signIn()" class="signin-btn">Sign in</button>
+            <button (click)="register()" class="register-btn2" *ngIf="!accountCreated">Register</button>
         </form>
     </div>
 

@@ -10,6 +10,7 @@ namespace fashscape.Repository
 {
     public interface IUserRepository : IGenericRepository<User>
     {
-        
+        public Task UpdatePassword(UserDTO user, string newPassword);
+
     }
 }

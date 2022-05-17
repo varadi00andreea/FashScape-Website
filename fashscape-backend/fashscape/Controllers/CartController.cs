@@ -1,4 +1,5 @@
-﻿using fashscape.Models;
+﻿using fashscape.DTOs;
+using fashscape.Models;
 using fashscape.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -75,6 +76,7 @@ namespace fashscape.Controllers
             await _cartService.DeleteByIdAsync(id);
             return Ok($"Product from cart with id {id} was deleted");
         }
+
 
     }
 }

@@ -13,7 +13,7 @@ namespace fashscape.Controllers
     public class ProductController : Controller
     {
         private readonly IProductService _productService;
-        
+
         public ProductController(IProductService productService)
         {
             _productService = productService;
@@ -42,8 +42,8 @@ namespace fashscape.Controllers
         [HttpGet("/getByName")]
         public async Task<Product> GetProductByName(string productName)
         {
-           return await _productService.GetProductByName(productName);
-            
+            return await _productService.GetProductByName(productName);
+
         }
 
         [HttpGet("/getById")]

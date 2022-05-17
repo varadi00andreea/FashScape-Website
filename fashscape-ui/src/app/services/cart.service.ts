@@ -8,22 +8,22 @@ import { Product } from '../models/product';
 })
 export class CartService {
   url = 'https://localhost:44322/Cart';
-  url1='https://localhost:44322/';
-  constructor(private http:HttpClient) { }
+  url1 = 'https://localhost:44322/';
+  constructor(private http: HttpClient) { }
 
-  addToCart(id: any){
-    return this.http.post(this.url,id);
+  addToCart(id: any) {
+    return this.http.post(this.url, id);
   }
 
-  getProductsFromCart(){
+  getProductsFromCart() {
     return this.http.get<Product[]>(`${this.url}`);
   }
 
-  getCart(){
+  getCart() {
     return this.http.get<Cart[]>(`${this.url1}getCart`);
   }
 
-  deleteFromCart(id: any){
-    return this.http.delete(`${this.url1}Cart?id=${id}`, {responseType: 'text'});
+  deleteFromCart(id: any) {
+    return this.http.delete(`${this.url1}Cart?id=${id}`, { responseType: 'text' });
   }
 }

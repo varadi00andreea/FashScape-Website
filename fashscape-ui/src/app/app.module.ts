@@ -15,6 +15,8 @@ import { HelpComponent } from './help/help.component';
 import { SingleProductComponent } from './single-product/single-product.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { OrderComponent } from './order/order.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     SingleProductComponent,
     AboutUsComponent,
     ShoppingCartComponent,
+    UpdateProfileComponent,
+    OrderComponent,
  
   ],
   imports: [

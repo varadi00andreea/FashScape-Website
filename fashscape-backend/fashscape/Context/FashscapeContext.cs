@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace fashscape.Context
 {
-    public class FashscapeContext:DbContext
+    public class FashscapeContext : DbContext
     {
 
         public DbSet<User> Users { get; set; }
@@ -16,13 +16,13 @@ namespace fashscape.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-           
+
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer("Server=.\\MSSQLSERVER01; Database=fashscape; Trusted_connection=true;");
             }
 
-            
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -49,7 +49,7 @@ namespace fashscape.Context
                     Name = "Baggy Jeans",
                     Description = "Popular from the early 1990s to the mid 2000s, baggy jeans are back in style. They have a cool factor to them that makes even the simplest wardrobes come to life.",
                     Price = 89.99,
-                    Size="38"
+                    Size = "38"
                 },
                 new Product
                 {
@@ -57,7 +57,7 @@ namespace fashscape.Context
                     Name = "Casual Dress",
                     Description = "Perfect for summer days. Very soft material.",
                     Price = 47,
-                    Size="Universal"
+                    Size = "Universal"
                 },
                 new Product
                 {
@@ -65,7 +65,7 @@ namespace fashscape.Context
                     Name = "Pink Crop Top",
                     Description = "I've recently buyed it but it's not the right size. I have to say it's not very stretchy.",
                     Price = 62.30,
-                    Size="S"
+                    Size = "S"
                 },
                 new Product
                 {
@@ -73,7 +73,7 @@ namespace fashscape.Context
                     Name = "Gown",
                     Description = "Perfect for a summerish wedding.",
                     Price = 326.99,
-                    Size="36-38"
+                    Size = "36-38"
                 },
                 new Product
                 {
@@ -81,43 +81,43 @@ namespace fashscape.Context
                     Name = "Gym Leggings",
                     Description = "Form-flattering that provides ultimate comfort in high intensity workout.",
                     Price = 89.90,
-                    Size="S"
+                    Size = "S"
                 },
                 new Product
                 {
-                    Id=6,
-                    Name="Black Flared Jeans",
-                    Description="Great if you are looking for a fashion forward twist on classic denim jeans.",
-                    Price=120.99,
-                    Size="40"
+                    Id = 6,
+                    Name = "Black Flared Jeans",
+                    Description = "Great if you are looking for a fashion forward twist on classic denim jeans.",
+                    Price = 120.99,
+                    Size = "40"
                 },
                 new Product
                 {
-                    Id=7,
-                    Name="Knee High Boots",
-                    Description= "Knee high boots are a staple in every wardrobe.",
-                    Price=200,
-                    Size="39"
+                    Id = 7,
+                    Name = "Knee High Boots",
+                    Description = "Knee high boots are a staple in every wardrobe.",
+                    Price = 200,
+                    Size = "39"
                 },
                 new Product
                 {
-                    Id=8,
-                    Name="Split Maxi Dress",
-                    Description="Very nice color. It looks good on anyone.",
-                    Price=170,
-                    Size="M"
+                    Id = 8,
+                    Name = "Split Maxi Dress",
+                    Description = "Very nice color. It looks good on anyone.",
+                    Price = 170,
+                    Size = "M"
                 },
                 new Product
                 {
-                    Id=9,
-                    Name="Sandals",
-                    Description="High heeled sandals. You can wear them for a casual look or even for a party.",
-                    Price=219.90,
-                    Size="37"
+                    Id = 9,
+                    Name = "Sandals",
+                    Description = "High heeled sandals. You can wear them for a casual look or even for a party.",
+                    Price = 219.90,
+                    Size = "37"
                 }
-                
+
                 );
-            
+
         }
     }
 }

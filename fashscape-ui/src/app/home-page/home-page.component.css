@@ -32,7 +32,7 @@ height: 90%;
 align-items: center;
 margin-left: 25px;
 margin-bottom: 20px;
-  }
+}
 .column {
 flex: content;
 margin-left: 25px;
@@ -137,14 +137,14 @@ margin-left: 25px;
 background-color:rgb(243, 102, 177);
 color: white;
 margin-top: 25%;
- }
+}
 .one{
 margin-left: 1%;
- }
+}
 .two{
 margin-left: 85%;
- }
- .alert{
+}
+.alert{
 color: red;
 font-size: 15px;
 }
@@ -159,11 +159,3 @@ font-weight: 500;
 margin-bottom: 30px;
 margin-top: 10px;
 }
-
-
-
-
-
-
-
-

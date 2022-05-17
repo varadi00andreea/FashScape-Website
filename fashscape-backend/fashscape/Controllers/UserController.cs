@@ -7,7 +7,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace fashscape.Controllers
-{   [Route("[controller]")]
+{
+    [Route("[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -24,7 +25,7 @@ namespace fashscape.Controllers
             await _userService.CreateAsync(user);
             return Ok(user.Id);
         }
-        
+
         [HttpGet]
         public async Task<ActionResult<List<User>>> GetUsers()
         {
@@ -32,10 +33,16 @@ namespace fashscape.Controllers
             {
                 return Ok(await _userService.GetAll());
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest(ex);
             }
+        }
+        [HttpPost("/changePassword")]
+        public async Task<IActionResult> UpdatePassword([FromQuery] UserDTO user, string newPassword)
+        {
+            await _userService.UpdatePassword(user, newPassword);
+            return Ok(user.Password);
         }
     }
 }

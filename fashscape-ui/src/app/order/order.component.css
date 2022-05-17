@@ -1,0 +1,47 @@
+.alert{
+color: red;
+font-size: 15px;
+}
+.order-input{
+display: flex;
+margin-top: 5px;
+margin-bottom: 5px;
+width: 800px;
+border-radius: 5px;
+height: 35px;
+font-size: 20px;
+}
+.row{
+flex: content;
+font-size: 23px;
+}
+.order-form{
+margin-top: 10%;
+display: flex;
+flex-direction: column;
+margin-left: 25%;
+font-size: 23px;
+width: fit-content;
+}
+.text{
+text-align: center;
+margin-top: 5%;
+font-family: 'Anek Tamil';
+font-size: 40px;
+}
+.complete-btn{
+width: fit-content;
+background-color:rgb(243, 102, 177) ;
+border-radius: 6px;
+border-color: rgb(243, 102, 177);
+color: white;
+font-size: 20px;
+font-weight: 500;
+margin-left: 600px;   
+margin-top: 15px;
+cursor: pointer;
+}
+.total{
+font-size: 15px;
+font-weight: 500;
+}

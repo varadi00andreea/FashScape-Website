@@ -25,5 +25,10 @@ namespace fashscape.Services
         {
             return await _userRepo.GetAll();
         }
+
+        public async Task UpdatePassword(UserDTO user, string newPassword)
+        {
+            await _userRepo.UpdatePassword(user, newPassword);
+        }
     }
 }

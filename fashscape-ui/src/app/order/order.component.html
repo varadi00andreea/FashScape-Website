@@ -1,0 +1,68 @@
+<h1 class="text">Please complete the form</h1>
+<div class="order-form">
+    <form class="order" [formGroup]="orderForm">
+
+        <div class="row">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control order-input" formControlName="firstName" required>
+            <div *ngIf="orderForm.controls['firstName'].errors?.['required'] && (orderForm.controls['firstName'].touched || orderForm.controls['firstName'].dirty)"
+                class="alert">
+                *First Name is required.
+            </div>
+            <div *ngIf="orderForm.controls['firstName'].errors?.pattern && (orderForm.controls['firstName'].touched || orderForm.controls['firstName'].dirty)"
+                class="alert">
+                *Your first name cannot contain numbers.
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control order-input" formControlName="lastName" required>
+            <div *ngIf="orderForm.controls['lastName'].errors?.['required'] && (orderForm.controls['lastName'].touched || orderForm.controls['lastName'].dirty)"
+                class="alert">
+                *Last Name is required.
+            </div>
+            <div *ngIf="orderForm.controls['lastName'].errors?.pattern && (orderForm.controls['lastName'].touched || orderForm.controls['lastName'].dirty)"
+                class="alert">
+                *Your last name cannot contain numbers.
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="address">Address</label>
+            <input type="text" class="form-control order-input" formControlName="address" required>
+            <div *ngIf="orderForm.controls['address'].errors?.['required'] && (orderForm.controls['address'].touched || orderForm.controls['address'].dirty)"
+                class="alert">
+                *Address is required.
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" class="form-control order-input" formControlName="phoneNumber" required>
+            <div *ngIf="orderForm.controls['phoneNumber'].errors?.['required'] && (orderForm.controls['phoneNumber'].touched || orderForm.controls['phoneNumber'].dirty)"
+                class="alert">
+                *Phone number is required.
+            </div>
+            <div *ngIf="orderForm.controls['phoneNumber'].errors?.pattern && (orderForm.controls['phoneNumber'].touched || orderForm.controls['phoneNumber'].dirty)"
+                class="alert">
+                *Enter a valid phone number.
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="email">Email</label>
+            <input type="text" class="form-control order-input" formControlName="email" required>
+            <div *ngIf="orderForm.controls['email'].errors?.['required'] && (orderForm.controls['email'].touched || orderForm.controls['email'].dirty)"
+                class="alert">
+                *Email is required.
+            </div>
+            <div *ngIf="orderForm.controls['email'].errors?.email" class="alert">
+                *Enter a valid email address.
+            </div>
+        </div>
+        
+    </form>
+
+    <button class="complete-btn" (click)="complete()">Complete</button>
+</div>

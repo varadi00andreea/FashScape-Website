@@ -9,18 +9,18 @@ import { ProductService } from '../services/product.service';
 })
 export class BuyComponent implements OnInit {
   productList!: Product[];
-  labels!:string[];
+  labels!: string[];
 
-  constructor(private productService: ProductService){
- 
+  constructor(private productService: ProductService) {
+
   }
-  
+
   ngOnInit(): void {
     this.getProductList();
   }
 
-  getProductList(){
-    this.productService.getProducts().subscribe(list => this.productList=list);
+  getProductList() {
+    this.productService.getProducts().subscribe(list => this.productList = list);
   }
 
 
