@@ -37,12 +37,12 @@ export class OrderComponent implements OnInit {
     }
     else {
       Swal.fire({ icon: 'success', title: 'Yay!', text: 'Thank you for your Order'});
-
+      setTimeout(() => {
+        console.log('sleep');
+        this.router.navigate(['']);
+      }, 2000);
     }
-    setTimeout(() => {
-      console.log('sleep');
-      this.router.navigate(['']);
-    }, 2000);
+  
   }
 
 }
